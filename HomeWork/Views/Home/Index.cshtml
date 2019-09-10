@@ -10,10 +10,9 @@
 <body>
     <div>
         <form method="post" action="">
-            <p>Введите дату </p>
             <input type="text" name="date" value= @ViewData["date"]>
-            <button>Определить</button>
-            <p>@ViewData["quarter"]</p>
+            <button>Получить номер квартала</button>
+            <p>@ViewData["result"]</p>
         </form>
     </div>
 </body>

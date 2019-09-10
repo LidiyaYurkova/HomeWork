@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace HomeWork.Controllers
 {
+   
     public class HomeController : Controller
     {
+      
         public ActionResult Index()
         {
             return View();
@@ -21,8 +23,8 @@ namespace HomeWork.Controllers
             try
             {
                 validatedDate = Convert.ToDateTime(date);
-                quarter = (validatedDate.Month + 2) / 3;
-                ViewData["quarter"] = "Определённо " + quarter + " квартал.";
+                quarter = validatedDate.GetQuarter();
+                ViewData["result"] = "Определённо " + quarter + " квартал.";
                 @ViewData["date"] = date;
                 return View();
             }
@@ -33,10 +35,7 @@ namespace HomeWork.Controllers
                 @ViewData["date"] = date;
                 return View();
             }
-
-
-
-          
+                      
         }
 
     }
