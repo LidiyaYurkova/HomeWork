@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Определение квартала</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="">
+            <p>Введите дату </p>
+            <input type="text" name="date" value= @ViewData["date"]>
+            <button>Определить</button>
+            <p>@ViewData["quarter"]</p>
+        </form>
+    </div>
+</body>
+</html>
